@@ -1,0 +1,220 @@
+{
+  "resourceType": "DiagnosticReport",
+  "contained": [
+    {
+      "resourceType": "Practitioner",
+      "id": "practitioner-001",
+      "identifier": [
+        {
+          "system": "http://hl7.org/fhir/sid/us-npi",
+          "value": "1124189600"
+        }
+      ],
+      "active": true,
+      "name": [
+        {
+          "family": "Grant",
+          "given": [
+            "Jacqueline",
+            "H"
+          ],
+          "prefix": [
+            "Dr."
+          ],
+          "suffix": [
+            "MD",
+            "MPH",
+            "MPA"
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "observation-001",
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "http://www.radlex.org",
+            "code": "RID50295",
+            "display": "PI-RADS Lesion Assessment Category"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://www.radlex.org",
+            "code": "RID50323",
+            "display": "PI-RADS X - Inadequate or absent (Lesion)"
+          }
+        ],
+        "text": "PI-RADS X - Inadequate or absent"
+      },
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "RID11517",
+                "display": "Index tumor"
+              }
+            ]
+          },
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "observation-002",
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "http://www.radlex.org",
+            "code": "RID50295",
+            "display": "PI-RADS Lesion Assessment Category"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://www.radlex.org",
+            "code": "RID50297",
+            "display": "PI-RADS 2 - Low (Lesion)"
+          }
+        ],
+        "text": "PI-RADS 2 - Low"
+      },
+      "hasMember": [
+        {
+          "reference": "#observation-003"
+        }
+      ],
+      "component": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "RID11517",
+                "display": "Index tumor"
+              }
+            ]
+          },
+          "valueBoolean": true
+        }
+      ]
+    },
+    {
+      "resourceType": "Observation",
+      "id": "observation-003",
+      "status": "final",
+      "code": {
+        "coding": [
+          {
+            "system": "http://www.radlex.org",
+            "code": "RID50301",
+            "display": "PI-RADS T2WI PZ Lesion Assessment Category"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://www.radlex.org",
+            "code": "RID50304",
+            "display": "PI-RADS 3 - T2WI PZ Intermediate"
+          }
+        ],
+        "text": "PI-RADS 3 - T2WI PZ Intermediate"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://www.siemens-healthineers.com/carbon/reporting",
+      "value": "C4431-2022-02-22-232"
+    }
+  ],
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "IMG",
+          "display": "Diagnostic Imaging"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "30675-3",
+        "display": "MR Prostate"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "system": "urn:82.42.444.42",
+      "value": "shareUniversalId:8493391"
+    }
+  },
+  "effectiveDateTime": "2022-01-24",
+  "issued": "2022-01-24T19:32:52+01:00",
+  "resultsInterpreter": [
+    {
+      "reference": "#practitioner-001"
+    }
+  ],
+  "imagingStudy": [
+    {
+      "identifier": {
+        "system": "urn:dicom:uid",
+        "value": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045"
+      }
+    }
+  ],
+  "result": [
+    {
+      "reference": "#observation-001"
+    },
+    {
+      "reference": "#observation-002"
+    },
+    {
+      "reference": "#observation-003"
+    }
+  ],
+  "presentedForm": [
+    {
+      "contentType": "application/pdf",
+      "language": "en-US",
+      "data": "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lkw5jAfW6//OfoLrX4Gx1q+U6GPcY/xj9Y81HOAO8AfqDzQc547zx+uPN0xyk/xk/UXuIn+x/nfc7/ir3FXerOW0fC6Xy5dypXw9V8+HuTDfy/XyI9wIbwg1hQK9/t7K3qbewIh/pHKkaSQg8R6GLaOEKrJLRcFSJFS8qkwlkimHcuYwnhhMadTxGoyGbhru6TrAJ4GbciLdU8vwhdawFUM56xYrjUxOy9mN77yJLgLPEfQw8Ya6zJQFSUeBUQmoMZ05G+Pfm70tLhkNR252FJoA8fsyUjtSMqZjP0lc+eVfLUFzkktbguW+lKWVojcd+JZJJ1nFmj3+l959+TvfqumtXbdo+x7yxEuJ697EKwMBXTKAs1p1gQF2TPUfloAZ8a+7LTH1T08f9wYSZmXpWbpvLZm6wJzAvbkco93ysawx07asbSauxEtiRSeLzhWxRTqd2VvEsdZua6lk1XSzMuKSps0pdLkgc4LoDue4tTn0RtFnQpqcac9UMkcz6c58UY1F3pAvvEEhUjejsjIM1+CevlnUh+Lu4yrGs0F2AU69GgMUPDNUVVIWm/3mbAqYF/dq3LuxAXPi5PbyaEeemJ9v4bO3hzoWt63fN3B0c+WKSpmV8nNYXU/T4+HNj6y4sunHpvTgg+lyeM2icFmoqm3TkpF9GdLY4nR5/te2excEwquT8Rm9fnkyYBWLvrUUd5gaaMVdvQM6YSF0wWKgZ12KXAZmmgTIBWihaa47tHb4ztXD6yLDGzfMWTS88t7VA+tSrWhLBXMnZvpNmL7GZsw7MdNvxs9iPoH5FcwXMf8e8zV8jH76TyvU4bN7gv8dfF5vnaGrX+Vuat81oz4yQx+Yoavfs2/qv2pG/cgMffUMXf3+flN/9fv3TTr9nAb/BaJKyuQKZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9iago8PCAvVGl0bGUgKE1pY3Jvc29mdCBXb3JkIC0gRG9jdW1lbnQxKSAvUHJvZHVjZXIgKG1hY09TIFZlcnNpb24gMTIuMi4xIFwoQnVpbGQgMjFENjJcKSBRdWFydHogUERGQ29udGV4dCkKL0NyZWF0b3IgKFdvcmQpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyMjAyMjIyMjM5NDlaMDAnMDAnKSAvTW9kRGF0ZSAoRDoyMDIyMDIyMjIyMzk0OVowMCcwMCcpCj4+CmVuZG9iagp4cmVmCjAgMTIKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMjY1IDAwMDAwIG4gCjAwMDAwMDMyMTMgMDAwMDAgbiAKMDAwMDAwMDAyMiAwMDAwMCBuIAowMDAwMDAwMzY5IDAwMDAwIG4gCjAwMDAwMDMxNzggMDAwMDAgbiAKMDAwMDAwMzM0NSAwMDAwMCBuIAowMDAwMDAwNDY2IDAwMDAwIG4gCjAwMDAwMDMyOTYgMDAwMDAgbiAKMDAwMDAwMzcxOSAwMDAwMCBuIAowMDAwMDAzOTc4IDAwMDAwIG4gCjAwMDAwMDg3OTUgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSAxMiAvUm9vdCA4IDAgUiAvSW5mbyAxMSAwIFIgL0lEIFsgPDM4ZTdjZjYzNzk0ZmEzMmFkM2Q2M2VlZWFiZjI0ZmE3Pgo8MzhlN2NmNjM3OTRmYTMyYWQzZDYzZWVlYWJmMjRmYTc+IF0gPj4Kc3RhcnR4cmVmCjkwMTEKJSVFT0YK"
+    }
+  ],
+  "conclusionCode": [
+    {
+      "coding": [
+        {
+          "system": "http://www.radlex.org",
+          "code": "RID50290",
+          "display": "PI-RADS 2 - Low"
+        }
+      ]
+    }
+  ],
+  "id": "123c0450-e31e-4a19-a825-c84f257156d4",
+  "meta": {
+    "versionId": "39a7bdcd-72db-42c5-aa5f-750adaa16c3d",
+    "lastUpdated": "2022-02-22T23:04:05.298+00:00"
+  }
+}
